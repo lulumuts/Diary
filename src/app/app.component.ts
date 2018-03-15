@@ -10,6 +10,5 @@ export class AppComponent {
   title = 'Your Diary';
   Write = 'Thoughts';
 
-constructor() {}
 
   }

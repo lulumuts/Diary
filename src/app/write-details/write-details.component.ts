@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {entry} from '../entry'
 
 @Component({
@@ -8,9 +8,14 @@ import {entry} from '../entry'
 })
 export class WriteDetailsComponent implements OnInit {
 
+
   @Input() entry:entry;
+  @Output() isComplete= new EventEmitter<boolean>();
 
+  entryDelete(complete:boolean){
+    this.isComplete.emit(complete);
 
+  }
 
   constructor() { }
 

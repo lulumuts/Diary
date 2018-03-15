@@ -4,8 +4,9 @@
 
   <li id="{{i}}" appHighlight>{{entry.name}}</li>
   <button (click)='toogleDetails(i)'>Add Your Entry</button>
-  <app-write-details *ngIf='entry.showDescription' [entry]='entry'></app-write-details>
-
+  <div *ngIf='entry.showDescription'>
+  <app-write-details  [entry]='entry' (isComplete)='deleteentry($event,i)'></app-write-details>
+</div>
 </div>
 
 </ul>
