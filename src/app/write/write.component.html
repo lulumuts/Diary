@@ -1,0 +1,11 @@
+<h1>Write Your Diary Entry here</h1>
+<ul>
+  <div *ngFor='let entry of entrys; let i = index'>
+
+  <li id="{{i}}" appHighlight>{{entry.name}}</li>
+  <button (click)='toogleDetails(i)'>Add Your Entry</button>
+  <app-write-details *ngIf='entry.showDescription' [entry]='entry'></app-write-details>
+
+</div>
+
+</ul>
