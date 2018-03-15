@@ -3,7 +3,7 @@
   <div *ngFor='let entry of entrys; let i = index'>
 
   <li id="{{i}}" appHighlight>{{entry.name}}</li>
-  <button (click)='toogleDetails(i)'>Add Your Entry</button>
+  <button class="btn btn-primary" (click)='toogleDetails(i)'>Add Your Entry</button>
   <div *ngIf='entry.showDescription'>
   <app-write-details  [entry]='entry' (isComplete)='deleteentry($event,i)'></app-write-details>
 </div>
