@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { WriteComponent } from './write/write.component';
 import { WriteDetailsComponent } from './write-details/write-details.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { WriteFormComponent } from './write-form/write-form.component';
 
 
 @NgModule({
@@ -15,10 +17,12 @@ import { DateCountPipe } from './date-count.pipe';
     WriteComponent,
     WriteDetailsComponent,
     HighlightDirective,
-    DateCountPipe
+    DateCountPipe,
+    WriteFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
